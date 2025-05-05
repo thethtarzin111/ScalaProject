@@ -1,22 +1,110 @@
 package com.innova.renewableenergy
+
 object REPS {
   // Main control function to run the plant
   def run(
            sources: Map[String, EnergySource],
            alertSystem: AlertSystem
-         ): (ControlUnit, Seq[String]) = {
+         ): Unit = {
 
     // Initialize control unit
-    val controlUnit = ControlUnit(sources)
+    var controlUnit = ControlUnit(sources)
+    var running = true
 
-    // Monitor energy sources for issues
-    val alerts = monitorSources(sources.values.toSeq, alertSystem)
+    // Main menu loop
+    while (running) {
+      val choice = UserInterface.showMenu()
 
-    // Make appropriate adjustments
-    val adjustedControlUnit = adjustOperations(controlUnit, alerts)
+      choice match {
+        case 1 => // Monitor Energy Sources
+          val records = DataCollection.fetchData(controlUnit.controlledSources)
+          UserInterface.displaySourceStatuses(records)
 
-    // Return updated control unit and alerts
-    (adjustedControlUnit, alerts)
+          // Generate and display alerts
+          val alerts = monitorSources(controlUnit.controlledSources.values.toSeq, alertSystem)
+          UserInterface.displayAlerts(alerts)
+
+          // Make automatic adjustments
+          controlUnit = adjustOperations(controlUnit, alerts)
+          println("\nAutomatic adjustments applied based on alerts.")
+
+        case 2 => // View Energy Data
+          val date = UserInterface.getSearchDate()
+          val records = DataStorage.searchByDate(date)
+          UserInterface.displayEnergyData(records)
+
+        case 3 => // Analyze Energy Production
+          val period = UserInterface.showAnalysisOptions()
+          val sourceType = UserInterface.showSourceTypes()
+
+          val allRecords = DataStorage.loadData()
+          val filteredRecords = DataAnalysis.filterByPeriod(allRecords, period)
+
+          val analysisResults = if (sourceType == "All") {
+            Map(
+              "Solar" -> DataAnalysis.analyzeOutput(filteredRecords, "Solar"),
+              "Wind" -> DataAnalysis.analyzeOutput(filteredRecords, "Wind"),
+              "Hydro" -> DataAnalysis.analyzeOutput(filteredRecords, "Hydro")
+            )
+          } else {
+            Map(sourceType -> DataAnalysis.analyzeOutput(filteredRecords, sourceType))
+          }
+
+          UserInterface.displayAnalysisResults(analysisResults)
+
+        case 4 => // Adjust Energy Sources
+          println("\nManual Energy Source Adjustment")
+          println("------------------------------")
+          println("1. Adjust Solar Panel Orientation")
+          println("2. Adjust Wind Turbine Direction")
+          println("3. Adjust Hydro Power Flow Rate")
+          print("\nChoose an option (1-3): ")
+
+          val adjustChoice = scala.io.StdIn.readInt()
+
+          adjustChoice match {
+            case 1 => // Solar
+              print("Enter Solar Panel ID: ")
+              val id = scala.io.StdIn.readLine()
+              print("Enter new orientation (degrees): ")
+              val orientation = scala.io.StdIn.readDouble()
+              controlUnit = controlUnit.controlSolarOrientation(id, orientation)
+              println(s"Solar panel $id orientation adjusted to $orientation degrees.")
+
+            case 2 => // Wind
+              print("Enter Wind Turbine ID: ")
+              val id = scala.io.StdIn.readLine()
+              print("Enter new direction (degrees): ")
+              val direction = scala.io.StdIn.readDouble()
+              controlUnit = controlUnit.controlTurbineDirection(id, direction)
+              println(s"Wind turbine $id direction adjusted to $direction degrees.")
+
+            case 3 => // Hydro
+              print("Enter Hydro Power ID: ")
+              val id = scala.io.StdIn.readLine()
+              print("Enter new flow rate (m³/s): ")
+              val flowrate = scala.io.StdIn.readDouble()
+              controlUnit = controlUnit.controlWaterflowRate(id, flowrate)
+              println(s"Hydro power $id flow rate adjusted to $flowrate m³/s.")
+
+            case _ =>
+              println("Invalid option.")
+          }
+
+        case 5 => // Exit
+          running = false
+          println("Exiting REPS. Goodbye!")
+
+        case _ => // Invalid choice
+          println("Invalid option. Please try again.")
+      }
+
+      // Pause before showing menu again
+      if (running) {
+        println("\nPress Enter to continue...")
+        scala.io.StdIn.readLine()
+      }
+    }
   }
 
   // Monitor sources and generate alerts

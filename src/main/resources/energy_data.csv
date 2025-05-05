@@ -64,3 +64,15 @@ timestamp,source_id,source_type,output_kw,status,efficiency,additional_info
 2025-05-05 21:53:42,wind2,Wind,212.5,active,0.85,windSpeed=15.0;direction=270.0
 2025-05-05 21:53:42,solar1,Solar,0.0,warning,0.9,orientation=30.0
 2025-05-05 21:53:42,hydro1,Hydro,2648.7,active,0.9,flowrate=30.0;head=10.0
+2025-05-05 22:15:36,wind1,Wind,62.96296296296295,active,0.85,windSpeed=8.0;direction=180.0
+2025-05-05 22:15:36,solar2,Solar,0.0,warning,0.75,orientation=50.0
+2025-05-05 22:15:36,hydro2,Hydro,5959.575,active,0.9,flowrate=45.0;head=15.0
+2025-05-05 22:15:36,wind2,Wind,212.5,active,0.85,windSpeed=15.0;direction=270.0
+2025-05-05 22:15:36,solar1,Solar,0.0,warning,0.9,orientation=30.0
+2025-05-05 22:15:36,hydro1,Hydro,2648.7,active,0.9,flowrate=30.0;head=10.0
+2025-05-05 22:23:40,wind1,Wind,62.96296296296295,active,0.85,windSpeed=8.0;direction=180.0
+2025-05-05 22:23:40,solar2,Solar,0.0,warning,0.75,orientation=50.0
+2025-05-05 22:23:40,hydro2,Hydro,5959.575,active,0.9,flowrate=45.0;head=15.0
+2025-05-05 22:23:40,wind2,Wind,212.5,active,0.85,windSpeed=15.0;direction=270.0
+2025-05-05 22:23:40,solar1,Solar,0.0,warning,0.9,orientation=30.0
+2025-05-05 22:23:40,hydro1,Hydro,2648.7,active,0.9,flowrate=30.0;head=10.0
