@@ -1,0 +1,34 @@
+[0m[[0m[31merror[0m] [0m[0mD:\ScalaProject\src\src\main\scala\com\innova\renewableenergy\Main.scala:9:19: not found: value SolarPanel[0m
+[0m[[0m[31merror[0m] [0m[0m      "solar1" -> SolarPanel("solar1", 30.0),[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\ScalaProject\src\src\main\scala\com\innova\renewableenergy\Main.scala:10:19: not found: value SolarPanel[0m
+[0m[[0m[31merror[0m] [0m[0m      "solar2" -> SolarPanel("solar2", 50.0, 0.75),[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\ScalaProject\src\src\main\scala\com\innova\renewableenergy\Main.scala:11:18: not found: value WindTurbine[0m
+[0m[[0m[31merror[0m] [0m[0m      "wind1" -> WindTurbine("wind1", 180.0, 8.0),[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\ScalaProject\src\src\main\scala\com\innova\renewableenergy\Main.scala:12:18: not found: value WindTurbine[0m
+[0m[[0m[31merror[0m] [0m[0m      "wind2" -> WindTurbine("wind2", 270.0, 15.0),[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\ScalaProject\src\src\main\scala\com\innova\renewableenergy\Main.scala:13:19: not found: value HydroPower[0m
+[0m[[0m[31merror[0m] [0m[0m      "hydro1" -> HydroPower("hydro1", 30.0),[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\ScalaProject\src\src\main\scala\com\innova\renewableenergy\Main.scala:14:19: not found: value HydroPower[0m
+[0m[[0m[31merror[0m] [0m[0m      "hydro2" -> HydroPower("hydro2", 45.0, 15.0)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\ScalaProject\src\src\main\scala\com\innova\renewableenergy\Main.scala:18:23: not found: value AlertSystem[0m
+[0m[[0m[31merror[0m] [0m[0m    val alertSystem = AlertSystem()[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\ScalaProject\src\src\main\scala\com\innova\renewableenergy\Main.scala:21:19: not found: value DataCollection[0m
+[0m[[0m[31merror[0m] [0m[0m    val records = DataCollection.fetchData(energySources)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\ScalaProject\src\src\main\scala\com\innova\renewableenergy\Main.scala:24:5: not found: value DataStorage[0m
+[0m[[0m[31merror[0m] [0m[0m    DataStorage.storeData(records)[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\ScalaProject\src\src\main\scala\com\innova\renewableenergy\Main.scala:37:23: not found: value ControlUnit[0m
+[0m[[0m[31merror[0m] [0m[0m    val controlUnit = ControlUnit(energySources)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\ScalaProject\src\src\main\scala\com\innova\renewableenergy\Main.scala:67:5: not found: value REPS[0m
+[0m[[0m[31merror[0m] [0m[0m    REPS.run(energySources, alertSystem)[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m11 errors found[0m
