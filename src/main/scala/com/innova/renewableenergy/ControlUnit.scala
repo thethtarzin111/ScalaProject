@@ -1,3 +1,8 @@
+//Team Innova
+//Members: Mohammad Amman, Salek Md Peash Been, Thet Htar Zin
+//In this code, we've mainly utilized pure functions as well as Option data type.
+//This is mainly developed with reference from lectures and also resorted to AI when things were a bit confusing.
+
 package com.innova.renewableenergy
 case class ControlUnit(controlledSources: Map[String, EnergySource]) {
 
@@ -21,6 +26,7 @@ case class ControlUnit(controlledSources: Map[String, EnergySource]) {
     }
   }
 
+  //Control and adjust water flow rate
   def controlWaterflowRate(unitId: String, newFlowrate: Double): ControlUnit = {
     controlledSources.get(unitId) match {
       case Some(hydroPlant: HydroPower) => val updatedHydroPlant = hydroPlant.trackWaterflow(newFlowrate)

@@ -1,3 +1,6 @@
+//Team Innova
+//Members: Mohammad Amman, Salek Md Peash Been, Thet Htar Zin
+//AI Declaration: This part of the code was implemented with the help of AI tool named Claude ai.
 package com.innova.renewableenergy
 import java.io.{BufferedWriter, File, FileWriter}
 import scala.io.Source
@@ -16,8 +19,9 @@ case class EnergyRecord(
                        )
 
 object DataStorage {
-  // Update this path to match your project structure
+  // We just gave a hardcoded file path here.
   val dataFilePath = "src/main/resources/energy_data.csv"
+  //The file format is now given year-month-date but since this is just MVP, we can always change the date time format.
   val dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
 
   // Store energy records to CSV file

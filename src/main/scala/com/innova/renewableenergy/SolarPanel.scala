@@ -1,3 +1,10 @@
+//Team Innova
+//Members: Mohammad Amman, Salek Md Peash Been, Thet Htar Zin
+/*
+Description of the file
+This is for the solar planel where we can generate electricity from solar power.
+Things to consider here the most are direction of the sun and angle of the panel.
+ */
 package com.innova.renewableenergy
 case class SolarPanel(
                        panelId: String,

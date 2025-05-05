@@ -1,3 +1,14 @@
+//Team Innova
+//Members: Mohammad Amman, Salek Md Peash Been, Thet Htar Zin
+//AI Declaration: This file was built with the help of AI tool named Claude AI for better understanding of the alert system.
+/*
+Descripion of AlertSystem
+In REPS, we need to have an alert system for solar panel, wind turbine and hydro plant.
+This is to make sure that the power output is optimal.
+For solar panels, if they're not in alignment with the sun, the power output will not be optimal.
+As for wind turbine, if the wind is too strong, it should alert the operators.
+Otherwise, it could cause damage.
+ */
 package com.innova.renewableenergy
 case class AlertSystem(thresholds: Map[String, Double] =
                        Map(
@@ -57,7 +68,7 @@ case class AlertSystem(thresholds: Map[String, Double] =
 
           alerts.toSeq
 
-        //For wind energy
+        //This part of the code is for wind energy.
         case wind: WindTurbine =>
           val alerts = collection.mutable.Buffer[Alert]()
 
@@ -83,7 +94,7 @@ case class AlertSystem(thresholds: Map[String, Double] =
 
           alerts.toSeq
 
-        //For hydro power
+        //This part of the code is for hydro power.
         case hydro: HydroPower =>
           val alerts = collection.mutable.Buffer[Alert]()
 

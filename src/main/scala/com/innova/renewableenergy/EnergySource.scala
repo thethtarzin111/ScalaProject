@@ -1,3 +1,6 @@
+//Team Innova
+//Members: Mohammad Amman, Salek Md Peash Been, Thet Htar Zin
+
 package com.innova.renewableenergy
 //Base trait (Parent class) for all energy sources
 trait EnergySource {

@@ -1,3 +1,10 @@
+//Team Innova
+//Members: Mohammad Amman, Salek Md Peash Been, Thet Htar Zin
+/*
+Description of the file
+This is for the wind turbine where we can generate electricity from wind power.
+Things to consider here are wind speed and wind direction the most.
+ */
 package com.innova.renewableenergy
 case class WindTurbine(
                         turbineId: String,

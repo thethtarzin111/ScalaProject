@@ -1,3 +1,10 @@
+//Team Innova
+//Members: Mohammad Amman, Salek Md Peash Been, Thet Htar Zin
+/*
+Description of the file
+This is for the hydro plant where we can generate electricity from hydropower.
+Things to consider here the most are flowrate and head.
+ */
 package com.innova.renewableenergy
 case class HydroPower(
                        unitId: String,

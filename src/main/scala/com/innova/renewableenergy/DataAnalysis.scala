@@ -1,3 +1,12 @@
+//Team Innova
+//Members: Mohammad Amman, Salek Md Peash Been, Thet Htar Zin
+/*
+Description of this file:
+This is to analyse the data from csv file.
+We tried to use API but there were so many errors and we couldn't finish the API thing on time.
+So, we just made up some mockup data in .csv file.
+We asked Claude to generate some mockup data to analyse.
+ */
 package com.innova.renewableenergy
 // DataAnalysis object provides statistical functions for energy data
 object DataAnalysis {

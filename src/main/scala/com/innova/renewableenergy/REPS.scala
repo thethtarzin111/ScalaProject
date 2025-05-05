@@ -1,3 +1,12 @@
+//Team Innova
+//Members: Mohammad Amman, Salek Md Peash Been, Thet Htar Zin
+/*
+Description of the file:
+This is our main system that connects everything.
+There's also a menu base userinterface.
+Initially planned to connect with UserInterface.scala but since something went wrong, we just put the menu in here.
+AI Declaration: This part of the code was heavily referenced from AI tool called Claude and it was used for debugging as well.
+ */
 package com.innova.renewableenergy
 
 object REPS {
@@ -74,7 +83,7 @@ object REPS {
             case 2 => // Wind
               print("Enter Wind Turbine ID: ")
               val id = scala.io.StdIn.readLine()
-              print("Enter new direction (degrees): ")
+              print("Enter new direction in degrees: ")
               val direction = scala.io.StdIn.readDouble()
               controlUnit = controlUnit.controlTurbineDirection(id, direction)
               println(s"Wind turbine $id direction adjusted to $direction degrees.")

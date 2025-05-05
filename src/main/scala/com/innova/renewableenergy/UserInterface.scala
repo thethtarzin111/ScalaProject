@@ -1,3 +1,6 @@
+//Team Innova
+//Members: Mohammad Amman, Salek Md Peash Been, Thet Htar Zin
+//AI Declaration: This part of the code was heavily referenced from AI tool called Claude and it was used for debugging as well.
 package com.innova.renewableenergy
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter

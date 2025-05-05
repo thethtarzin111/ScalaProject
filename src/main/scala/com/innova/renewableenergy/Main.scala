@@ -1,8 +1,14 @@
+//Team Innova
+//Members: Mohammad Amman, Salek Md Peash Been, Thet Htar Zin
+//This part of the code was implemented with AI tool called Claude.
+/*
+This is the main file or the starting point of the whole system.
+ */
 package com.innova.renewableenergy
 
 object Main {
   def main(args: Array[String]): Unit = {
-    println("Renewable Energy Plant System (REPS)")
+    println("Innova's Renewable Energy Plant System")
     println("------------------------------------")
 
     // Create energy sources
